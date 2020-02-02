@@ -99,7 +99,10 @@ class experiments():
         plt.fill_between(train_size, validation_scores_mean - validation_scores_std, validation_scores_mean +
                          validation_scores_std, alpha=0.25, color='g')
         plt.ylabel('Score', fontsize=12)
-        plt.ylim(0.5, 1.05)
+        if dataset.datasetNo == 1:
+            plt.ylim(0.5, 1.05)
+        elif dataset.datasetNo == 2:
+            plt.ylim(0.0, 1.05)
         plt.xlabel('Training set size', fontsize=12)
         plt.title('Learning curves for '+learnerType+' with Best Grid-Searched Parameters', fontsize=12, y=1.03)
         plt.legend()

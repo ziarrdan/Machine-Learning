@@ -20,12 +20,12 @@ if __name__ == '__main__':
     dataset1 = dataloader.incomeDS()
     dataset1.processDataset()
     dataset.append(dataset1)
-    dataset2 = dataloader.waveformDS()
+    dataset2 = dataloader.wineDS()
     dataset2.processDataset()
     dataset.append(dataset2)
 
     steps = 2
-    file = open('Best Hyperparameters at Step'+str(1)+'.txt', 'w')
+    file = open('Best Hyperparameters at Step '+str(1)+'.txt', 'w')
     file.write("Best Hyperparameters at Step " + str(1) + '\n')
     file.write("Figures are from step "+str(steps)+'\n')
 

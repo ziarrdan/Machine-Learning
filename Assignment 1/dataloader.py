@@ -76,24 +76,13 @@ class wineDS(dataset):
         # adapted from https://www.kaggle.com/muammerhuseyinoglu/prediction-of-wine-quality
         super().__init__(path, verbose, seed)
         random.seed(seed)
+        self.datasetNo = 2
         self.data = pd.read_csv(self.path, header=0)
         self.data = self.data[:1200]
         self.data = self.data.sample(frac=1)
-        quality = self.data["quality"].values
-        category = []
-        for num in quality:
-            if num < 5:
-                category.append("Bad")
-            elif num > 6:
-                category.append("Good")
-            else:
-                category.append("Mid")
 
-        category = pd.DataFrame(data=category, columns=["category"])
-        data = pd.concat([self.data, category], axis=1)
-        data.drop(columns="quality", axis=1, inplace=True)
-        self.features = data.iloc[:, :-1].values
-        self.classes = data.iloc[:, -1].values
+        self.features = self.data.iloc[:, :-1].values
+        self.classes = self.data.iloc[:, -1].values
         labelencoderY = LabelEncoder()
         self.classes = labelencoderY.fit_transform(self.classes)
 
