@@ -52,8 +52,8 @@ class SVMLearner(parentlearner.ParentLearner):
         elif datasetNo == 2:
             parameters = {'tol': np.arange(1e-8, 1e-1, 0.01),
                           'gamma': ['scale', 'auto'],
-                          'C': np.arange(0.001, 10.1, 1)}
-            complexityParams = {'C': np.arange(0.001, 10.1, 1),
+                          'C': np.arange(0.001, 15.1, 1.5)}
+            complexityParams = {'C': np.arange(0.001, 15.1, 1.5),
                                 'gamma': [(10**(-x)) for x in range(6, 0, -1)]}
 
         super().__init__("SVM", self.learner, parameters, complexityParams)

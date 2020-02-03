@@ -47,8 +47,8 @@ class BoostingLearner(parentlearner.ParentLearner):
         elif datasetNo == 2:
             parameters = {'learning_rate': [(2 ** x) / 100 for x in range(7)] + [1],
                           'algorithm': ['SAMME', 'SAMME.R'],
-                          'n_estimators': np.arange(1, 102, 10)}
-            complexityParams = {'n_estimators': np.arange(1, 102, 10)}
+                          'n_estimators': np.arange(1, 152, 15)}
+            complexityParams = {'n_estimators': np.arange(1, 152, 15)}
 
         super().__init__("Boosting", self.learner, parameters, complexityParams)
         self.best_params = None
