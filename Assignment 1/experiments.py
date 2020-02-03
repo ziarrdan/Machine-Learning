@@ -168,7 +168,10 @@ class experiments():
             bestValuelist.append(bestValue)
             learnerClass.setGridSearchParams(complexParamName, bestValuelist)
 
-        plt.ylim(0.5, 1.05)
+        if dataset.datasetNo == 1:
+            plt.ylim(0.5, 1.05)
+        elif dataset.datasetNo == 2:
+            plt.ylim(0.0, 1.05)
         plt.ylabel('Score', fontsize=12)
         plt.xlabel(complexParamName, fontsize=12)
         plt.title('Complexity curve for ' + learnerType, fontsize=12, y=1.03)

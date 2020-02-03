@@ -69,8 +69,8 @@ class ANNLearner(parentlearner.ParentLearner):
             parameters = {'alpha': [10 ** -x for x in np.arange(1, 5.01, 2)],
                           'momentum': sorted([x / 5 for x in range(5)] + [0.5]),
                           'learning_rate_init': sorted([(x + 1) / 1000 for x in range(2)]),
-                          'hidden_layer_sizes': [(x,) for x in range(1, 42, 7)]}
-            complexityParams = {'hidden_layer_sizes': [(x,) for x in range(1, 42, 7)]}
+                          'hidden_layer_sizes': [(x,) for x in range(1, 52, 10)]}
+            complexityParams = {'hidden_layer_sizes': [(x,) for x in range(1, 52, 10)]}
             self.trainingTimeParam = {'max_iter': np.arange(1, 300, 30)}
 
         super().__init__("ANN", self.learner, parameters, complexityParams)
