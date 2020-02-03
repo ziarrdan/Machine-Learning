@@ -263,7 +263,10 @@ class experiments():
                      np.max(validation_scores_mean), color='k', marker='o')
             bestValue = trainingTimeParam[trainingTimeName][np.argmax(validation_scores_mean)]
 
-            plt.ylim(0.5, 1.05)
+            if dataset.datasetNo == 1:
+                plt.ylim(0.5, 1.05)
+            elif dataset.datasetNo == 2:
+                plt.ylim(0.0, 1.05)
             plt.ylabel('Score', fontsize=12)
             plt.xlabel(trainingTimeName, fontsize=12)
             plt.title('Performance curve for ' + learnerType, fontsize=12, y=1.03)
