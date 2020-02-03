@@ -13,4 +13,4 @@ scikit-learn | 0.22.1
 scipy | 1.4.1
 
 ## How to run the code for each assignment?
-To run the code, simply run the runscript.py file under each assignment directory. The firgures are generated under its coresponding "Figures" folder and all the logs are generated in the root assignment directory.
+To run the code, simply run the runscript.py file under each assignment directory. The figures are generated under its coresponding "Figures" folder and all the logs are generated in the root assignment directory.
