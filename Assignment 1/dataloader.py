@@ -72,10 +72,11 @@ class dataset:
         self.scale_standard()
 
 class wineDS(dataset):
-    def __init__(self, path='./Datasets/winequality-red.csv', verbose=False, seed=1234567):
+    def __init__(self, path='./Datasets/winequality-red.csv', verbose=False, seed=1):
         # adapted from https://www.kaggle.com/muammerhuseyinoglu/prediction-of-wine-quality
         super().__init__(path, verbose, seed)
         random.seed(seed)
+        np.random.seed(seed)
         self.datasetNo = 2
         self.data = pd.read_csv(self.path, header=0)
         self.data = self.data[:1200]
@@ -94,9 +95,10 @@ class wineDS(dataset):
         self.balanced = is_balanced(self.classes)
 
 class incomeDS(dataset):
-    def __init__(self, path='./Datasets/income.csv', verbose=False, seed=1231234):
+    def __init__(self, path='./Datasets/income.csv', verbose=False, seed=1):
         super().__init__(path, verbose, seed)
         random.seed(seed)
+        np.random.seed(seed)
         self.datasetNo = 1
         self.data = pd.read_csv(self.path, header=0)
         self.data = self.data.sample(frac=1)
@@ -129,6 +131,8 @@ class waveformDS(dataset):
     def __init__(self, path='./Datasets/waveform.csv', verbose=False, seed=1):
         super().__init__(path, verbose, seed)
         super().__init__(path, verbose, seed)
+        random.seed(seed)
+        np.random.seed(seed)
         self.datasetNo = 2
         self.data = pd.read_csv(self.path, header=0)
 

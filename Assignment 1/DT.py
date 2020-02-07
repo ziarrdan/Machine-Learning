@@ -68,8 +68,8 @@ class DTLearner(parentlearner.ParentLearner):
             parameters = {'criterion': ['gini', 'entropy'],
                           'splitter': ['best', 'random'],
                           'min_samples_split': np.arange(2, 10, 1),
-                          'max_depth': np.arange(1, 22, 2)}
-            complexityParams = {'max_depth': np.arange(1, 22, 2)}
+                          'max_depth': np.arange(1, 52, 5)}
+            complexityParams = {'max_depth': np.arange(1, 52, 5)}
 
         super().__init__("DT", self.learner, parameters, complexityParams)
 

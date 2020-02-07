@@ -45,16 +45,18 @@ class SVMLearner(parentlearner.ParentLearner):
 
         if datasetNo == 1:
             parameters = {'tol': np.arange(1e-8, 1e-1, 0.01),
-                          'gamma' : ['scale', 'auto'],
-                          'C': np.arange(0.001, 10.1, 1)}
-            complexityParams = {'C': np.arange(0.001, 10.1, 1),
+                          'gamma': [(10**(-x)) for x in range(6, 0, -1)],
+                          'C': np.arange(0.001, 20.1, 2),
+                          'kernel' : ['poly', 'rbf']}
+            complexityParams = {'C': np.arange(0.001, 20.1, 2),
                                 'gamma': [(10**(-x)) for x in range(6, 0, -1)]}
         elif datasetNo == 2:
             parameters = {'tol': np.arange(1e-8, 1e-1, 0.01),
-                          'gamma': ['scale', 'auto'],
-                          'C': np.arange(0.001, 15.1, 1.5)}
-            complexityParams = {'C': np.arange(0.001, 15.1, 1.5),
-                                'gamma': [(10**(-x)) for x in range(6, 0, -1)]}
+                          'gamma': [(10**(-x)) for x in range(4, -2, -1)],
+                          'C': np.arange(0.001, 10.1, 1.0),
+                          'kernel': ['poly', 'rbf']}
+            complexityParams = {'C': np.arange(0.001, 10.1, 1.0),
+                                'gamma': [(10**(-x)) for x in range(4, -2, -1)]}
 
         super().__init__("SVM", self.learner, parameters, complexityParams)
 

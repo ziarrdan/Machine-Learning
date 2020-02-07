@@ -148,7 +148,14 @@ class experiments():
 
             bestValuelist = []
             bestValue = complexityParams[complexParamName][np.argmax(validation_scores_mean)]
-            bestValuelist.append(bestValue)
+            print("The optimum value found using complexity analysis is: ", str(bestValue))
+            promptText = "If you do not want the optimum value for " + complexParamName + " to be used at the next stage " \
+                                                                                          "for " + learnerType + " learner, please type yours here: "
+            bestManuelValue = input(promptText)
+            if bestManuelValue != "":
+                bestValuelist.append(int(bestManuelValue))
+            else:
+                bestValuelist.append(bestValue)
             learnerClass.setGridSearchParams(complexParamName, bestValuelist)
 
         else:
@@ -165,7 +172,14 @@ class experiments():
 
             bestValuelist = []
             bestValue = complexityParams[complexParamName][np.argmax(validation_scores_mean)]
-            bestValuelist.append(bestValue)
+            print("The optimum value found using complexity analysis is: ", str(bestValue))
+            promptText = "If you do not want the optimum value for "+ complexParamName +" to be used at the next stage " \
+                         "for "+ learnerType +" learner, please type yours here: "
+            bestManuelValue = input(promptText)
+            if bestManuelValue != "":
+                bestValuelist.append((int(bestManuelValue.split(',')[0][1:]),))
+            else:
+                bestValuelist.append(bestValue)
             learnerClass.setGridSearchParams(complexParamName, bestValuelist)
 
         if dataset.datasetNo == 1:
@@ -208,6 +222,14 @@ class experiments():
 
             bestValuelist = []
             bestValue = complexityParams[complexParamName][np.argmax(validation_scores_mean)]
+            print("The optimum value found using complexity analysis is: ", str(bestValue))
+            promptText = "If you do not want the optimum value for " + complexParamName + " to be used at the next stage " \
+                                                                                          "for " + learnerType + " learner, please type yours here: "
+            bestManuelValue = input(promptText)
+            if bestManuelValue != "":
+                bestValuelist.append(float(bestManuelValue))
+            else:
+                bestValuelist.append(bestValue)
             bestValuelist.append(bestValue)
             learnerClass.setGridSearchParams(complexParamName, bestValuelist)
 
