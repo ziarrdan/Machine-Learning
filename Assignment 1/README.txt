@@ -16,4 +16,8 @@ panda           0.25.3
 scikit-learn    0.22.1
 scipy           1.4.1
 
+You can simply install the required libraries using pip and the requirements.txt file that is available in the repository. 
+
 4. To run the project simply run the runscript.py file under the Assignment 1 directory in the repo. The figures are generated under its corresponding “Figures” folder and all the logs are generated in the root Assignment 1 directory.
+
+5. Note that at each step (there are 3 in total), for each learner, the program asks the user if he/she wants to change the complexity hyper-parameter manually after it generates the learning curve.
