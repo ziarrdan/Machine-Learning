@@ -5,16 +5,30 @@ This repository consists of four distinct projects referred to as assignments.
 ### Assignment 1: Supervised Learning
 The first assignment uses KNN, Decision Tree, Support Vector Machines (SVM), Boosting and Artificial Neural Networks (ANN) learners to classify two distinct datasets. The final result is printed in a text file and the learning curves and complexity curves are saved as .png files. Any other classification problem, balanced or imbalanced, binary or multiclass classification, could also be tackled by the current implementation. When adding a new dataset, the hyper-parameters search span are potentially required to be changed.
 
-## Required IDE and Libraries
-The code in this repository was written and tested in PyCharm 2018.2.4 using the following libraries (the dependencies of each library is not mentioned):
+### Assignment 2: Randomized Optimization
+The second assignment uses Randomized Hill Climbing, Simulated Annealing, Genetic Algorithm and MIMIC optimizers to maximize three different fitness functions. Additionally, it uses Randomized Hill Climbing, Simulated Annealing, Genetic Algorithm and Gradient Descent to tune a Neural Network set of weights and generates plots for comparison. The final result is generated as a set of plots and curves and is saved as .png files.
 
-library | Version
+## Required IDE and Libraries
+The code in this repository was written and tested in PyCharm 2018.2.4 using the following libraries (the dependencies of each library is not mentioned). Note that for assignment 2, Conda Package Manager could be used to add a specific version of mlrose library (mlrose-hiive) to the environment. 
+
+libraries for A1 | Version
 --------------|------------
 matplotlib | 3.1.2
 numpy | 1.18.1
 pandas | 0.25.3
 scikit-learn | 0.22.1
 scipy | 1.4.1
+
+libraries for A2 | Version
+--------------|------------
+mlrose-hiive* | 1.2.0
+matplotlib | 3.1.2
+numpy | 1.18.1
+pandas | 0.25.3
+scikit-learn | 0.22.1
+scipy | 1.4.1
+
+\* https://github.com/hiive/mlrose
 
 ## How to Run
 To run the code, simply run the runscript.py file under each assignment directory. The figures are generated under its corresponding  "Figures" folder and all the logs are generated in the root assignment directory.
