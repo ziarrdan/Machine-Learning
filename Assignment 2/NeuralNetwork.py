@@ -23,10 +23,11 @@ class neuralNetworkWeightOptimization:
         self.optimizers = ['gradient_descent', 'simulated_annealing', 'genetic_algorithm', 'random_hill_climb']
         self.NNmaxIter = []
     def optimizeNeuralNetworWeights(self, optimizer):
-        self.NNmaxIter = np.arange(5, 506, 50)
+        self.NNmaxIter = np.arange(5, 1006, 100)
         if (optimizer == 'genetic_alg'):
-            self.NNmaxIter = np.arange(5, 506, 125)
+            self.NNmaxIter = np.arange(5, 1006, 250)
         kFold = 5
+        kFoldGen = 1
         iteration = 0
         learner = []
         legend = []
@@ -106,6 +107,7 @@ class neuralNetworkWeightOptimization:
                                           curve=False)
                 learner[iteration].append(nn)
                 legend[iteration].append('0.3')
+                kFold = kFoldGen
             elif (optimizer == 'random_hill_climb'):
                 nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='random_hill_climb',
                                              max_iters=int(iter), bias=True, is_classifier=True, learning_rate=0.001,
@@ -139,7 +141,7 @@ class neuralNetworkWeightOptimization:
 
                     timeStart = time.time()
                     learner[iter][l].fit(training_x, training_y)
-                    timeTraining.append(time.time() - timeStart)
+                    timeTraining = (time.time() - timeStart)
 
                     trainingF1 = f1_score(learner[iter][l].predict(training_x), training_y, average='weighted')
                     testingF1 = f1_score(learner[iter][l].predict(testing_x), testing_y, average='weighted')
@@ -206,8 +208,10 @@ class neuralNetworkWeightOptimization:
         self.optimizeNeuralNetworWeights('random_hill_climb')
 
     def compareNNs(self):
-        self.NNmaxIter = np.arange(5, 506, 50)
+        self.NNmaxIter = np.arange(5, 1006, 100)
+        self.NNmaxIterGen = np.arange(5, 1006, 250)
         kFold = 5
+        kFoldGen = 1
         iteration = 0
         learner = []
         legend = []
@@ -230,21 +234,22 @@ class neuralNetworkWeightOptimization:
             legend[iteration].append('GD')
             nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='simulated_annealing',
                                       max_iters=int(iter), bias=True, is_classifier=True, learning_rate=0.001,
-                                      early_stopping=False, clip_max=1e10, schedule=mlrose.ExpDecay(),
+                                      early_stopping=False, clip_max=1e10, schedule=mlrose.GeomDecay(),
                                       curve=False)
             learner[iteration].append(nn)
             legend[iteration].append('SA')
-            nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='genetic_alg',
-                                      max_iters=int(iter), bias=True, is_classifier=True, learning_rate=0.001,
-                                      early_stopping=False, clip_max=1e10, pop_size=200, mutation_prob=0.3,
-                                      curve=False)
-            learner[iteration].append(nn)
-            legend[iteration].append('GA')
             nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='random_hill_climb',
                                       max_iters=int(iter), bias=True, is_classifier=True, learning_rate=0.001,
                                       early_stopping=False, clip_max=1e10, curve=False)
             learner[iteration].append(nn)
             legend[iteration].append('RHC')
+            nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='genetic_alg',
+                                      max_iters=int(iter), bias=True, is_classifier=True, learning_rate=0.001,
+                                      early_stopping=False, clip_max=1e10, pop_size=300, mutation_prob=0.2,
+                                      curve=False)
+            learner[iteration].append(nn)
+            legend[iteration].append('GA')
+
             iteration += 1
 
         for l in range(len(learner[0])):
@@ -254,7 +259,13 @@ class neuralNetworkWeightOptimization:
             learnersTestingScoreStd.append([])
             learnersTime.append([])
             learnersTimeStd.append([])
-            for iter in range(len(self.NNmaxIter)):
+            if legend[0][l] == 'GA':
+                NNmaxIter = self.NNmaxIterGen
+                kFold = 5
+            else:
+                NNmaxIter = self.NNmaxIter
+                kFold = 1
+            for iter in range(len(NNmaxIter)):
                 learnersTrainingScore[l].append(l)
                 learnersTestingScore[l].append(l)
                 learnersTrainingScoreStd[l].append(l)
@@ -272,7 +283,7 @@ class neuralNetworkWeightOptimization:
 
                     timeStart = time.time()
                     learner[iter][l].fit(training_x, training_y)
-                    timeTraining.append(time.time() - timeStart)
+                    timeTraining = (time.time() - timeStart)
 
                     trainingF1 = f1_score(learner[iter][l].predict(training_x), training_y, average='weighted')
                     testingF1 = f1_score(learner[iter][l].predict(testing_x), testing_y, average='weighted')
@@ -292,7 +303,13 @@ class neuralNetworkWeightOptimization:
 
         plt.style.use('seaborn-whitegrid')
         for l in range(len(learnersTrainingScore)):
-            plt.plot(self.NNmaxIter, learnersTrainingScore[l], label=legend[0][l])
+            if legend[0][l] == 'GA':
+                NNmaxIter = self.NNmaxIterGen
+                kFold = 5
+            else:
+                NNmaxIter = self.NNmaxIter
+                kFold = 1
+            plt.plot(NNmaxIter, learnersTrainingScore[l], label=legend[0][l])
         plt.ylabel('Score', fontsize=12)
         plt.xlabel('Number of Iterations', fontsize=12)
         plt.title('Comparing Validation F1 Score for All Optimizers', fontsize=12, y=1.03)
@@ -302,10 +319,51 @@ class neuralNetworkWeightOptimization:
 
         plt.style.use('seaborn-whitegrid')
         for l in range(len(learnersTrainingScore)):
-            plt.plot(self.NNmaxIter, learnersTime[l], label=legend[0][l])
+            if legend[0][l] == 'GA':
+                NNmaxIter = self.NNmaxIterGen
+                kFold = 5
+            else:
+                NNmaxIter = self.NNmaxIter
+                kFold = 1
+            plt.plot(NNmaxIter, learnersTime[l], label=legend[0][l])
         plt.ylabel('Time (s)', fontsize=12)
         plt.xlabel('Number of Iterations', fontsize=12)
         plt.title('Comparing Training Time for All Optimizers', fontsize=12, y=1.03)
         plt.legend()
         plt.savefig('Figures/Comparing-Time-for-All.png')
         plt.close()
+
+    def calcTestScore(self):
+        legendCounter = 0
+        learners = []
+        legend = []
+
+        nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='gradient_descent',
+                                  max_iters=200, bias=True, is_classifier=True, learning_rate=0.001,
+                                  early_stopping=False, clip_max=1e10, curve=False)
+        learners.append(nn)
+        legend.append('GD')
+        nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='simulated_annealing',
+                                  max_iters=800, bias=True, is_classifier=True, learning_rate=0.001,
+                                  early_stopping=False, clip_max=1e10, schedule=mlrose.GeomDecay(),
+                                  curve=False)
+        learners.append(nn)
+        legend.append('SA')
+        nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='random_hill_climb',
+                                  max_iters=600, bias=True, is_classifier=True, learning_rate=0.001,
+                                  early_stopping=False, clip_max=1e10, curve=False)
+        learners.append(nn)
+        legend.append('RHC')
+        nn = mlrose.NeuralNetwork(hidden_nodes=[20], activation='relu', algorithm='genetic_alg',
+                                  max_iters=200, bias=True, is_classifier=True, learning_rate=0.001,
+                                  early_stopping=False, clip_max=1e10, pop_size=300, mutation_prob=0.2,
+                                  curve=False)
+        learners.append(nn)
+        legend.append('GA')
+
+        for learner in learners:
+            timeStart = time.time()
+            learner.fit(self.dataset1.training_x, self.dataset1.training_y)
+            testingF1 = f1_score(learner.predict(self.dataset1.testing_x), self.dataset1.testing_y, average='weighted')
+            print('Testing F1-Score for' + legend[legendCounter] + ': ' + str(testingF1))
+            legendCounter += 1

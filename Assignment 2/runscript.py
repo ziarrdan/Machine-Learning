@@ -19,7 +19,7 @@ if __name__ == '__main__':
     optimizers = []
     exp = experiments.experiments()
 
-    """"# First problem is the Knapsack
+    # First problem is the Knapsack
     weights = np.random.randint(1, 20, size=20)
     values = np.random.randint(1, 10, size=20)
     max_weight_pct = 0.65
@@ -88,8 +88,9 @@ if __name__ == '__main__':
     mimicOptimizer = mimic.MIMIC()
     optimizers.append(mimicOptimizer)
     exp.getComplexityCurve(optimizer=mimicOptimizer, problem=problemFit, problemName='Four Peaks')
-    exp.getComparisonCurve(optimizers, problem=problemFit, problemName='Four Peaks')"""
+    exp.getComparisonCurve(optimizers, problem=problemFit, problemName='Four Peaks')
 
     nn = NeuralNetwork.neuralNetworkWeightOptimization()
     nn.optimizeNNs()
     nn.compareNNs()
+    nn.calcTestScore()
