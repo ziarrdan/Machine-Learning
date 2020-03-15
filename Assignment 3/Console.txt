@@ -1,0 +1,26 @@
+PCA - Number of new features considering 95% acumulative variance for Income Dataset  is:  37
+PCA - The reconstruction SSE considering 95% acumulative variance for Income Dataset  is:  0.021552354377775446
+PCA - Number of new features considering 95% acumulative variance for Wine Quality Dataset  is:  8
+PCA - The reconstruction SSE considering 95% acumulative variance for Wine Quality Dataset  is:  0.0505405277973455
+
+ICA - Number of new features considering minimum of 1. for kurtosis,  Income Dataset  is:  32
+ICA - The reconstruction SSE considering minimum of 1. for kurtosis Income Dataset  is:  0.02303442717037135
+ICA - Number of new features considering minimum of 1. for kurtosis,  Wine Quality Dataset  is:  3
+ICA - The reconstruction SSE considering minimum of 1. for kurtosis Wine Quality Dataset  is:  0.4126903625534424
+
+Testing Score for Income Datasetis:  0.8244348244348245
+Testing Score for Income Dataset Reduced by PCA is:  0.8421133089545694
+Testing Score for Income Dataset Reduced by ICA is:  0.8370927318295741
+Testing Score for Income Dataset Reduced by RP is:  0.8528940163432832
+Testing Score for Income Dataset Reduced by FA is:  0.8594648385670056
+Testing Score for Wine Quality Datasetis:  0.6433281258803755
+Testing Score for Wine Quality Dataset Reduced by PCA is:  0.6340281564770412
+Testing Score for Wine Quality Dataset Reduced by ICA is:  0.571471132284842
+Testing Score for Wine Quality Dataset Reduced by RP is:  0.6373346255978692
+Testing Score for Wine Quality Dataset Reduced by FA is:  0.6184006181914131
+Testing Score for Income Dataset is:  0.8158393330807122
+Testing Score for Income Dataset with KM Clusters Added is:  0.8072722208074824
+Testing Score for Income Dataset with EM Clusters Added is:  0.849279528488864
+Testing Score for Wine Quality Dataset is:  0.650796270106275
+Testing Score for Wine Quality Dataset with KM Clusters Added is:  0.6403456884628433
+Testing Score for Wine Quality Dataset with EM Clusters Added is:  0.6027996837822726
