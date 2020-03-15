@@ -50,7 +50,7 @@ if __name__ == '__main__':
     getTsnePlot(reducedDatasets2)
 
     # Part 3: Create the experiment class for NN Analysis
-    '''exp = experiments.experiments()
+    exp = experiments.experiments()
     exp.getLearningCurveAll(reducedDatasets1)
     exp.getLearningCurveAll(reducedDatasets2)
     # get cluster-added datasets plots
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     clusterAddedDatasets2.extend(clusterAddedDatasets[1])
     exp = experiments.experiments()
     exp.getLearningCurveAll(clusterAddedDatasets1, 1)
-    exp.getLearningCurveAll(clusterAddedDatasets2, 1)'''
+    exp.getLearningCurveAll(clusterAddedDatasets2, 1)
 
 
 

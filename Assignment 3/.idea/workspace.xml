@@ -5,66 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../Assignment 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignment 2/Figures/Sample Figure.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Income, 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Income, 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Income.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Income.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Wine, 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Wine, 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Wine.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Learning-Curve, Dataset Wine.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Income, 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Income, 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Income.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Income.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Wine, 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Wine, 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Wine.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/ANN/All-Training-Time-Curve, Dataset Wine.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by FA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by FA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by FA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by FA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by ICA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by ICA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by ICA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by ICA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by PCA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by PCA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by PCA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by PCA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by RP using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by RP using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by RP using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset Reduced by RP using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Parallel Coord for Wine Quality Dataset using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by FA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by FA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by ICA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by ICA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by PCA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by PCA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by RP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset Reduced by RP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Income Dataset.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by FA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by FA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by ICA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by ICA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by PCA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by PCA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by RP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset Reduced by RP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Score for Wine Quality Dataset.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by FA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by FA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by ICA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by ICA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by PCA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by PCA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by RP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset Reduced by RP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Income Dataset.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by FA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by FA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by ICA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by ICA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by PCA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by PCA.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by RP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset Reduced by RP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/Silhouette for Wine Quality Dataset.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by FA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by FA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by FA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by FA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by ICA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by ICA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by ICA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by ICA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by PCA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by PCA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by PCA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by PCA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by RP using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by RP using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by RP using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset Reduced by RP using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Income Dataset using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by FA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by FA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by FA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by FA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by ICA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by ICA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by ICA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by ICA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by PCA using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by PCA using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by PCA using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by PCA using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by RP using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by RP using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by RP using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset Reduced by RP using KM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset using EM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset using EM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset using KM.png" beforeDir="false" afterPath="$PROJECT_DIR$/Figures/Clustering/TSNE for Wine Quality Dataset using KM.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runscript.py" beforeDir="false" afterPath="$PROJECT_DIR$/runscript.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runscript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="293">
+              <caret line="65" column="53" lean-forward="true" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
               <folding>
                 <element signature="e#146#163#0" expanded="true" />
               </folding>
@@ -235,8 +175,8 @@
         <option value="$PROJECT_DIR$/DimReduction.py" />
         <option value="$PROJECT_DIR$/dataloader.py" />
         <option value="$PROJECT_DIR$/experiments.py" />
-        <option value="$PROJECT_DIR$/runscript.py" />
         <option value="$PROJECT_DIR$/Clustering.py" />
+        <option value="$PROJECT_DIR$/runscript.py" />
       </list>
     </option>
   </component>
@@ -641,8 +581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runscript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="293">
+          <caret line="65" column="53" lean-forward="true" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
           <folding>
             <element signature="e#146#163#0" expanded="true" />
           </folding>
