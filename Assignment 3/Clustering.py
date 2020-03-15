@@ -175,7 +175,7 @@ def getTsnePlot(dataset):
                 clusterEM = 3
                 paletteKM = ['red', 'blue']
                 paletteEM = ['red', 'green', 'blue']
-        elif ds.name.find('Wine'):
+        elif 'Wine' in ds.name:
             clusterKM = 4
             clusterEM = 2
             paletteKM = ['red', 'orange', 'green', 'blue']
@@ -278,7 +278,7 @@ def getTsnePlot(dataset):
             classDf = pd.DataFrame(clustringY_KM)
             classDf.columns = ['Class']
             datasetDf = pd.concat((pd.DataFrame(ds.training_x), classDf), axis=1)
-            parallel_coordinates(datasetDf, 'Class', color=paletteKM)
+            parallel_coordinates(datasetDf, 'Class', color=paletteKM, alpha=0.3)
             plt.xlabel('Features', fontsize=12)
             plt.title('Parallel Coordinates Plot for ' + ds.name + ' using KM', fontsize=12, y=1.03)
             plt.legend()
@@ -289,7 +289,7 @@ def getTsnePlot(dataset):
             classDf = pd.DataFrame(clustringY_EM)
             classDf.columns = ['Class']
             datasetDf = pd.concat((pd.DataFrame(ds.training_x), classDf), axis=1)
-            parallel_coordinates(datasetDf, 'Class', color=paletteEM)
+            parallel_coordinates(datasetDf, 'Class', color=paletteEM, alpha=0.3)
             plt.xlabel('Features', fontsize=12)
             plt.title('Parallel Coordinates Plot for ' + ds.name + ' using EM', fontsize=12, y=1.03)
             plt.legend()
