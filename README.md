@@ -28,6 +28,15 @@ pandas | 0.25.3
 scikit-learn | 0.22.1
 scipy | 1.4.1
 
+libraries for A3 | Version
+--------------|------------
+matplotlib | 3.2.0
+numpy | 1.18.1
+pandas | 1.0.1
+scikit-learn | 0.22.2
+scipy | 1.4.1
+seaborn | 0.10.0
+
 \* https://github.com/hiive/mlrose
 
 ## How to Run
