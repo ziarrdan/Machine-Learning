@@ -142,7 +142,7 @@ def calcICAPlotsAndReconsError(iDataset):
         xTransformed = xTransformedNotOrdered[:, np.array(order).argsort()]
         ica_resNorOrdered = pd.Series([abs(kurtosis(xTransformedNotOrdered[:, i])) for i in range(xTransformedNotOrdered.shape[1])])
         ica_res = pd.Series([abs(kurtosis(xTransformed[:, i])) for i in range(xTransformed.shape[1])])
-        featuresNumberCutoff = np.argmax(ica_res.values < 10.)
+        featuresNumberCutoff = np.argmax(ica_res.values < 2.)
 
         plt.style.use('seaborn-whitegrid')
         ax = ica_resNorOrdered.plot(kind='bar', logy=True, label='Not Ordered Kurtosis', color='r')

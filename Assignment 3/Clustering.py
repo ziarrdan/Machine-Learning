@@ -21,41 +21,41 @@ def calcClusterAdded(iDataset):
     for ds in iDataset:
         if 'Income' in ds.name:
             clusterKM = 3
-            clusterEM = 3
-
-            if 'FA' in ds.name:
-                clusterKM = 3
-                clusterEM = 2
-
-            if 'ICA' in ds.name:
-                clusterKM = 2
-                clusterEM = 2
-
-            if 'PCA' in ds.name:
-                clusterKM = 3
-                clusterEM = 3
-
-            if 'RP' in ds.name:
-                clusterKM = 2
-                clusterEM = 3
-        elif ds.name.find('Wine'):
-            clusterKM = 4
             clusterEM = 2
 
             if 'FA' in ds.name:
-                clusterKM = 5
+                clusterKM = 2
                 clusterEM = 2
 
             if 'ICA' in ds.name:
+                clusterKM = 2
+                clusterEM = 2
+
+            if 'PCA' in ds.name:
                 clusterKM = 3
+                clusterEM = 3
+
+            if 'RP' in ds.name:
+                clusterKM = 2
+                clusterEM = 3
+
+        elif 'Wine' in ds.name:
+            clusterKM = 2
+            clusterEM = 2
+
+            if 'FA' in ds.name:
+                clusterKM = 4
+                clusterEM = 2
+
+            if 'ICA' in ds.name:
+                clusterKM = 2
                 clusterEM = 2
 
             if 'PCA' in ds.name:
                 clusterKM = 2
                 clusterEM = 2
-
             if 'RP' in ds.name:
-                clusterKM = 4
+                clusterKM = 3
                 clusterEM = 2
 
         retDS = dataset()
@@ -148,14 +148,14 @@ def getTsnePlot(dataset):
     for ds in dataset:
         if 'Income' in ds.name:
             clusterKM = 3
-            clusterEM = 3
+            clusterEM = 2
             paletteKM = ['red', 'green', 'blue']
-            paletteEM = ['red', 'green', 'blue']
+            paletteEM = ['red', 'blue']
 
             if 'FA' in ds.name:
-                clusterKM = 3
+                clusterKM = 2
                 clusterEM = 2
-                paletteKM = ['red', 'green', 'blue']
+                paletteKM = ['red', 'blue']
                 paletteEM = ['red', 'blue']
 
             if 'ICA' in ds.name:
@@ -176,21 +176,21 @@ def getTsnePlot(dataset):
                 paletteKM = ['red', 'blue']
                 paletteEM = ['red', 'green', 'blue']
         elif 'Wine' in ds.name:
-            clusterKM = 4
+            clusterKM = 2
             clusterEM = 2
-            paletteKM = ['red', 'orange', 'green', 'blue']
+            paletteKM = ['red', 'blue']
             paletteEM = ['red', 'blue']
 
             if 'FA' in ds.name:
-                clusterKM = 5
+                clusterKM = 4
                 clusterEM = 2
-                paletteKM = ['red', 'green', 'blue', 'orange', 'purple']
+                paletteKM = ['red', 'green', 'blue', 'orange']
                 paletteEM = ['red', 'blue']
 
             if 'ICA' in ds.name:
-                clusterKM = 3
+                clusterKM = 2
                 clusterEM = 2
-                paletteKM = ['red', 'green', 'blue']
+                paletteKM = ['red', 'blue']
                 paletteEM = ['red', 'blue']
 
             if 'PCA' in ds.name:
@@ -200,9 +200,9 @@ def getTsnePlot(dataset):
                 paletteEM = ['red', 'blue']
 
             if 'RP' in ds.name:
-                clusterKM = 4
+                clusterKM = 3
                 clusterEM = 2
-                paletteKM = ['red', 'green', 'blue', 'orange']
+                paletteKM = ['red', 'green', 'blue']
                 paletteEM = ['red', 'blue']
 
         kmLearner = Clustering.KM(n_clusters=clusterKM)
@@ -222,20 +222,20 @@ def getTsnePlot(dataset):
         ARSEM = adjusted_rand_score(ds.training_y, clustringY_EM)
         silhouetteEM = silhouette_score(ds.training_x, clustringY_EM)
 
-        print('For dataset ' + ds.name + 'using KM, the v_measure, AMIS, ARS and silhouette are: ',
+        print('For dataset ' + ds.name + ' using KM, the v_measure, AMIS, ARS and silhouette are: ',
               v_measureKM, AMISKM, ARSKM, silhouetteKM)
-        print('For dataset ' + ds.name + 'using KM, the v_measure, AMIS, ARS and silhouette are: ',
+        print('For dataset ' + ds.name + ' using EM, the v_measure, AMIS, ARS and silhouette are: ',
               v_measureEM, AMISEM, ARSEM, silhouetteEM)
 
-        if clusterKM <= 2:
-            fig = plt.figure()
-            ax = fig.add_subplot()
-            tsne = TSNE(n_components=2, random_state=0)
-            tsne_obj = tsne.fit_transform(ds.training_x)
-            ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], alpha=0.4, c=[paletteKM[x] for x in clustringY_KM])
-            plt.xlabel('X')
-            plt.xlabel('Y')
-        else:
+        '''if clusterKM <= 2:'''
+        fig = plt.figure()
+        ax = fig.add_subplot()
+        tsne = TSNE(n_components=2, random_state=0)
+        tsne_obj = tsne.fit_transform(ds.training_x)
+        ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], alpha=0.4, c=[paletteKM[x] for x in clustringY_KM])
+        plt.xlabel('X')
+        plt.xlabel('Y')
+        '''else:
             fig = plt.figure()
             ax = fig.add_subplot(projection='3d')
             tsne = TSNE(n_components=3, random_state=0)
@@ -243,7 +243,7 @@ def getTsnePlot(dataset):
             ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], tsne_obj[:, 2], alpha=0.4, c=[paletteKM[x] for x in clustringY_KM])
             plt.xlabel('X')
             plt.xlabel('Y')
-            plt.xlabel('Z')
+            plt.xlabel('Z')'''
 
         ax.set_title('t-SNE Plot for ' + ds.name + ' using KM')
         plt.legend()

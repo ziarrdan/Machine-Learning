@@ -1,26 +1,56 @@
+For dataset Income Dataset using KM, the v_measure, AMIS, ARS and silhouette are:  0.10914147971985626 0.10859385723570045 0.04845983849532827 0.16582960884504674
+For dataset Income Dataset using EM, the v_measure, AMIS, ARS and silhouette are:  0.14434858652439617 0.14399774447352973 0.19297637181112903 0.16294814977662778
+For dataset Wine Quality Dataset using KM, the v_measure, AMIS, ARS and silhouette are:  0.05242682565000961 0.05016767599821547 0.06124862184683424 0.20550888413507792
+For dataset Wine Quality Dataset using EM, the v_measure, AMIS, ARS and silhouette are:  0.008831256901109615 0.006143609895225234 0.024730371680602332 0.22816093061745582
+
 PCA - Number of new features considering 95% acumulative variance for Income Dataset  is:  37
-PCA - The reconstruction SSE considering 95% acumulative variance for Income Dataset  is:  0.021552354377775446
+PCA - The reconstruction SSE considering 95% acumulative variance for Income Dataset  is:  0.02155487519563398
 PCA - Number of new features considering 95% acumulative variance for Wine Quality Dataset  is:  8
 PCA - The reconstruction SSE considering 95% acumulative variance for Wine Quality Dataset  is:  0.0505405277973455
+ICA - Number of new features considering minimum of 1. for kurtosis,  Income Dataset  is:  80
+ICA - The reconstruction SSE considering minimum of 1. for kurtosis Income Dataset  is:  0.01405325253134172
+ICA - Number of new features considering minimum of 1. for kurtosis,  Wine Quality Dataset  is:  9
+ICA - The reconstruction SSE considering minimum of 1. for kurtosis Wine Quality Dataset  is:  0.020630193067996863
 
-ICA - Number of new features considering minimum of 1. for kurtosis,  Income Dataset  is:  32
-ICA - The reconstruction SSE considering minimum of 1. for kurtosis Income Dataset  is:  0.02303442717037135
-ICA - Number of new features considering minimum of 1. for kurtosis,  Wine Quality Dataset  is:  3
-ICA - The reconstruction SSE considering minimum of 1. for kurtosis Wine Quality Dataset  is:  0.4126903625534424
+For dataset Income Dataset using KM, the v_measure, AMIS, ARS and silhouette are:  0.09953918008820599 0.09884531893666013 0.03979142557360529 0.16726375992174708
+For dataset Income Dataset using EM, the v_measure, AMIS, ARS and silhouette are:  0.1305460943342671 0.13010130539745407 0.17308836166756483 0.16520980268330815
 
-Testing Score for Income Datasetis:  0.8244348244348245
-Testing Score for Income Dataset Reduced by PCA is:  0.8421133089545694
-Testing Score for Income Dataset Reduced by ICA is:  0.8370927318295741
-Testing Score for Income Dataset Reduced by RP is:  0.8528940163432832
-Testing Score for Income Dataset Reduced by FA is:  0.8594648385670056
-Testing Score for Wine Quality Datasetis:  0.6433281258803755
-Testing Score for Wine Quality Dataset Reduced by PCA is:  0.6340281564770412
-Testing Score for Wine Quality Dataset Reduced by ICA is:  0.571471132284842
-Testing Score for Wine Quality Dataset Reduced by RP is:  0.6373346255978692
-Testing Score for Wine Quality Dataset Reduced by FA is:  0.6184006181914131
-Testing Score for Income Dataset is:  0.8158393330807122
-Testing Score for Income Dataset with KM Clusters Added is:  0.8072722208074824
-Testing Score for Income Dataset with EM Clusters Added is:  0.849279528488864
-Testing Score for Wine Quality Dataset is:  0.650796270106275
-Testing Score for Wine Quality Dataset with KM Clusters Added is:  0.6403456884628433
-Testing Score for Wine Quality Dataset with EM Clusters Added is:  0.6027996837822726
+For dataset Income Dataset Reduced by PCA using KM, the v_measure, AMIS, ARS and silhouette are:  0.11444084807182014 0.11376018152208554 0.052348737595863996 0.17360645753471238
+For dataset Income Dataset Reduced by PCA using EM, the v_measure, AMIS, ARS and silhouette are:  0.11482195580810144 0.11414168063140899 0.05287314761880756 0.1737059254365603
+For dataset Income Dataset Reduced by ICA using KM, the v_measure, AMIS, ARS and silhouette are:  0.002361672661086826 0.0018510311155119303 -0.006756846738308384 0.38338442263724953
+For dataset Income Dataset Reduced by ICA using EM, the v_measure, AMIS, ARS and silhouette are:  0.0014266784535733612 0.0008435774794292696 0.018410622139758376 0.2943858311112449
+
+For dataset Income Dataset Reduced by RP using KM, the v_measure, AMIS, ARS and silhouette are:  0.05229458024603252 0.051789810408458314 -0.03533867135798197 0.20516027002672205
+For dataset Income Dataset Reduced by RP using EM, the v_measure, AMIS, ARS and silhouette are:  0.10266834456381002 0.10197935880650412 0.04906848609315322 0.17026873594318545
+For dataset Income Dataset Reduced by FA using KM, the v_measure, AMIS, ARS and silhouette are:  0.06091527263487845 0.06041663733887285 -0.03276642446992938 0.1670133341148695
+For dataset Income Dataset Reduced by FA using EM, the v_measure, AMIS, ARS and silhouette are:  0.15422782920165698 0.15379418328298153 0.2032084741103148 0.13882369129795288
+
+For dataset Wine Quality Dataset using KM, the v_measure, AMIS, ARS and silhouette are:  0.06259394862977964 0.05975894038529822 0.06699434133304277 0.20630726405126795
+For dataset Wine Quality Dataset using EM, the v_measure, AMIS, ARS and silhouette are:  0.017399892688714353 0.013913781123247133 -0.010209494506922776 0.1622770084810924
+
+For dataset Wine Quality Dataset Reduced by PCA using KM, the v_measure, AMIS, ARS and silhouette are:  0.05431540613101127 0.05144953313754675 0.06514621093367925 0.22066211842593914
+For dataset Wine Quality Dataset Reduced by PCA using EM, the v_measure, AMIS, ARS and silhouette are:  0.007732450875051847 0.004350038233355384 0.01979922434611498 0.23444975464969986
+For dataset Wine Quality Dataset Reduced by ICA using KM, the v_measure, AMIS, ARS and silhouette are:  0.007161799558625556 0.0033862627763015752 0.008846997050871296 0.3312276303634843
+For dataset Wine Quality Dataset Reduced by ICA using EM, the v_measure, AMIS, ARS and silhouette are:  0.010397719876905095 0.006741850701122709 0.005412883884769924 0.332934078519618
+
+For dataset Wine Quality Dataset Reduced by RP using KM, the v_measure, AMIS, ARS and silhouette are:  0.03673017739525174 0.03180349820115857 0.012963050446793177 0.2775778486342902
+For dataset Wine Quality Dataset Reduced by RP using EM, the v_measure, AMIS, ARS and silhouette are:  0.009833184957544774 0.0064672594558040685 0.018911368908346382 0.18462404615573821
+For dataset Wine Quality Dataset Reduced by FA using KM, the v_measure, AMIS, ARS and silhouette are:  0.13351782480194713 0.12740718619185495 0.14247224395057562 0.1887138411393948
+For dataset Wine Quality Dataset Reduced by FA using EM, the v_measure, AMIS, ARS and silhouette are:  0.006950068506420097 0.0035459543490559604 0.018146963064842484 0.2760598831148471
+
+Testing Score for Income Dataset is:  0.8282133906194057
+Testing Score for Income Dataset Reduced by PCA is:  0.8350303034465019
+Testing Score for Income Dataset Reduced by ICA is:  0.8367978770455551
+Testing Score for Income Dataset Reduced by RP is:  0.8468435119125172
+Testing Score for Income Dataset Reduced by FA is:  0.8336645590874147
+Testing Score for Wine Quality Dataset is:  0.6502627771224353
+Testing Score for Wine Quality Dataset Reduced by PCA is:  0.6844642665563168
+Testing Score for Wine Quality Dataset Reduced by ICA is:  0.5785714324222766
+Testing Score for Wine Quality Dataset Reduced by RP is:  0.6025324394849874
+Testing Score for Wine Quality Dataset Reduced by FA is:  0.6463829374014345
+Testing Score for Income Dataset is:  0.8244348244348245
+Testing Score for Income Dataset with KM Clusters Added is:  0.8275631280395347
+Testing Score for Income Dataset with EM Clusters Added is:  0.8444947516154947
+Testing Score for Wine Quality Dataset is:  0.6197481827121454
+Testing Score for Wine Quality Dataset with KM Clusters Added is:  0.6107083318751514
+Testing Score for Wine Quality Dataset with EM Clusters Added is:  0.5899880391152303
