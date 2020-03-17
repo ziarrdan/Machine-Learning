@@ -149,6 +149,7 @@ def getTsnePlot(dataset):
         if 'Income' in ds.name:
             clusterKM = 3
             clusterEM = 2
+            markerEM = ['+', 'x']
             paletteKM = ['red', 'green', 'blue']
             paletteEM = ['red', 'blue']
 
@@ -227,7 +228,6 @@ def getTsnePlot(dataset):
         print('For dataset ' + ds.name + ' using EM, the v_measure, AMIS, ARS and silhouette are: ',
               v_measureEM, AMISEM, ARSEM, silhouetteEM)
 
-        '''if clusterKM <= 2:'''
         fig = plt.figure()
         ax = fig.add_subplot()
         tsne = TSNE(n_components=2, random_state=0)
@@ -235,38 +235,27 @@ def getTsnePlot(dataset):
         ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], alpha=0.4, c=[paletteKM[x] for x in clustringY_KM])
         plt.xlabel('X')
         plt.xlabel('Y')
-        '''else:
-            fig = plt.figure()
-            ax = fig.add_subplot(projection='3d')
-            tsne = TSNE(n_components=3, random_state=0)
-            tsne_obj = tsne.fit_transform(ds.training_x)
-            ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], tsne_obj[:, 2], alpha=0.4, c=[paletteKM[x] for x in clustringY_KM])
+        if 'FA' in ds.name and 'Income' in ds.name:
+            plt.scatter(tsne_obj[ds.training_y == 1, 0], tsne_obj[ds.training_y == 1, 1], marker='+', c='k')
             plt.xlabel('X')
             plt.xlabel('Y')
-            plt.xlabel('Z')'''
 
         ax.set_title('t-SNE Plot for ' + ds.name + ' using KM')
         plt.legend()
         plt.savefig('Figures/Clustering/TSNE for ' + ds.name + ' using KM.png')
         plt.close()
 
-        if clusterEM <= 2:
-            fig = plt.figure()
-            ax = fig.add_subplot()
-            tsne = TSNE(n_components=2, random_state=0)
-            tsne_obj = tsne.fit_transform(ds.training_x)
-            ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], alpha=0.4, c=[paletteEM[x] for x in clustringY_EM])
+        fig = plt.figure()
+        ax = fig.add_subplot()
+        tsne = TSNE(n_components=2, random_state=0)
+        tsne_obj = tsne.fit_transform(ds.training_x)
+        ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], alpha=0.4, c=[paletteEM[x] for x in clustringY_EM])
+        plt.xlabel('X')
+        plt.xlabel('Y')
+        if 'FA' in ds.name and 'Income' in ds.name:
+            plt.scatter(tsne_obj[ds.training_y == 1, 0], tsne_obj[ds.training_y == 1, 1], marker='+', c='k')
             plt.xlabel('X')
             plt.xlabel('Y')
-        else:
-            fig = plt.figure()
-            ax = fig.add_subplot(projection='3d')
-            tsne = TSNE(n_components=3, random_state=0)
-            tsne_obj = tsne.fit_transform(ds.training_x)
-            ax.scatter(tsne_obj[:, 0], tsne_obj[:, 1], tsne_obj[:, 2], alpha=0.4, c=[paletteEM[x] for x in clustringY_EM])
-            plt.xlabel('X')
-            plt.xlabel('Y')
-            plt.xlabel('Z')
 
         ax.set_title('t-SNE Plot for ' + ds.name + ' using EM')
         plt.legend()
