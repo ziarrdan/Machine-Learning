@@ -58,3 +58,11 @@ scipy | 1.4.1
 
 ## How to Run
 To run the code, simply run the runscript.py file under each assignment directory. The figures are generated under its corresponding  "Figures" folder and all the logs are generated in the root assignment directory.
+
+## Results
+Sample Outputs:
+
+|||
+--------------|------------
+|![Learning Curvers for Dicision Tree with Optimal Parameters](https://github.com/ziarrdan/Machine-Learning/blob/master/Assignment%201/Figures/Sample%20Learning%20Curve.png) |![Fitness vs Iteration for Simulated Annealing](https://github.com/ziarrdan/Machine-Learning/blob/master/Assignment%202/Figures/Sample%20Figure.png) | 
+|![t-SNE Plot for Income Dataset using KM](https://github.com/ziarrdan/Machine-Learning/blob/master/Assignment%203/Figures/Clustering/TSNE%20for%20Income%20Dataset%20using%20KM.png) | ![Time vs Iteration for Grid World no. 1](https://github.com/ziarrdan/Machine-Learning/blob/master/Assignment%204/Figures/Grid/Time%20vs%20Iteration%20for%20Grid%20World%20no.1.png) |
